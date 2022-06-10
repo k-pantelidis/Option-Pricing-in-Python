@@ -11,7 +11,6 @@ r = float(input("Insert Risk Free Rate Percentage(Default -2.14): ") or -2.14) /
 optionType = int(input("Insert 0 for Call Option or 1 for Put Option(Default 0)): ") or 0) / 100
 
 delta_t = years / steps
-print(delta_t)
 
 U = math.exp(sigma* math.sqrt(delta_t))
 D = math.exp(-sigma* math.sqrt(delta_t))
@@ -23,7 +22,8 @@ for i in range(0,steps+2):
     for j in range(0,i):
         m[i-1,j]= S * (U**(j)) * (D**((i-1)-(j)))
 
-print(m)
+df = pd.DataFrame(m)
+print(df)
 
 mm = np.zeros((steps+1,steps+1))
 
@@ -38,8 +38,6 @@ for i in range(steps-1, -1, -1):
   for j in range(i, -1, -1):
       mm[i, j] = ((((1 - p) * mm[i + 1, j]) + (p * mm[i + 1, j + 1])) / math.exp(r * delta_t))
 
-print(mm)
 
 df = pd.DataFrame(mm)
 print(df)
-
