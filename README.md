@@ -35,7 +35,7 @@ Insert Risk Free Rate Percentage(Default 0.86):
 
 Insert 0 for Call Option or 1 for Put Option(Default 0)): 
 
-Insert 0 for Binomial Model or 1 for Black Scholes(Default 0)): 1
+Insert 0 for Binomial Model or 1 for Black Scholes(Default 0)): **1**
 
 D1:  0.23686288255272936 D2: -0.06711203417560863
 
@@ -44,7 +44,7 @@ The value of the Call option is: 20.641202217436472
 
 ----------------
 
-For input value 0
+_**(For Binomial Tree Valuation method)**_
 
 
 Binomial Tree Stock Prices
