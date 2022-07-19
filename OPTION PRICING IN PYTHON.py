@@ -15,9 +15,9 @@ optionModel = int(input("Insert 0 for Binomial Model or 1 for Black Scholes(Defa
 
 
 delta_t = years / steps
-U = math.exp(sigma* math.sqrt(delta_t))
-D = math.exp(-sigma* math.sqrt(delta_t))
-p = ( math.exp(r*delta_t) - D)/(U-D)
+U = math.exp(sigma * math.sqrt(delta_t))
+D = math.exp(-sigma * math.sqrt(delta_t))
+p = ( math.exp(r * delta_t) - D) / (U-D)
 
 
 
@@ -49,18 +49,18 @@ def binomial():
 
 # Black Scholes Option Pricing
 def blackScholes():
-    d1 = ( math.log(S/X) + (r+sigma**2/2)*years) / (sigma*math.sqrt(years))
-    d2 = d1 - sigma*math.sqrt(years)
+    d1 = ( math.log(S/X) + (r+sigma**2/2) * years) / (sigma * math.sqrt(years))
+    d2 = d1 - sigma * math.sqrt(years)
     print(d1, d2)
 
-    if (optionType==0):
-        callOption = (S*(norm.cdf(d1, 0, 1)) - (norm.cdf(d2, 0 , 1)*X*math.exp(-r*years)))
+    if (optionType == 0):
+        callOption = (S * (norm.cdf(d1, 0, 1)) - (norm.cdf(d2, 0 , 1) * X * math.exp(-r * years)))
         print(callOption)
     else:
-        putOption = (norm.cdf(-d2, 0 , 1)*X*math.exp(-r*years)) - S*(norm.cdf(-d1, 0, 1))
+        putOption = (norm.cdf(-d2, 0 , 1) * X * math.exp(-r*years)) - S * (norm.cdf(-d1, 0, 1))
         print(putOption)
 
-if (optionModel==0):
+if (optionModel == 0):
     binomial()
 else:
     blackScholes()
