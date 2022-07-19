@@ -55,10 +55,10 @@ def blackScholes():
 
     if (optionType == 0):
         callOption = (S * (norm.cdf(d1, 0, 1)) - (norm.cdf(d2, 0 , 1) * X * math.exp(-r * years)))
-        print("The value of the Call option is:", callOption)
+        print("\nThe value of the Call option is: ", callOption)
     else:
         putOption = (norm.cdf(-d2, 0 , 1) * X * math.exp(-r*years)) - S * (norm.cdf(-d1, 0, 1))
-        print("The value of the Put option is:", putOption)
+        print("\nThe value of the Put option is: ", putOption)
 
 if (optionModel == 0):
     binomial()
