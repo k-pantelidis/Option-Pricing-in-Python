@@ -14,7 +14,7 @@ The arguments needed to make the calculations are:
   - Number of Years
   - Risk Free Rate Percentage
 
-As following the user may choose whether to valuate a "Put" or "Call" option. I have included default values for the user to test the accuracy of the valuations and see how it works. 
+As following the user may choose whether to valuate a "Put" or "Call" option and the valuation method of interest. I have included default values for the user to test the accuracy of the valuations and see how it works. 
 
 EXAMPLE
 --------------
@@ -114,7 +114,10 @@ Option Prices
 
 -----------------------------------------------------
 
+Planned for the upcoming versions:
 
+- Trinomial Tree Option Pricing method
+- Graphic representation
 
 
 
