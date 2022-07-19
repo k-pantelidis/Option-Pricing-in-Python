@@ -25,13 +25,13 @@ Insert Stock Spot Price(Default 155.87):
 
 Insert Option Strike Price(Default 155.87): 
 
-Insert Stock Volatility Percentage(Default 17.55): 
+Insert Stock Volatility Percentage Rate(Default 17.55): 
 
 Insert Number of Steps(Default 12): 
 
 Insert Number of Years(Default 3): 
 
-Insert Risk Free Rate Percentage(Default 0.86): 
+Insert Risk Free Percentage Rate(Default 0.86): 
 
 Insert 0 for Call Option or 1 for Put Option(Default 0)): 
 
