@@ -29,7 +29,7 @@ def binomial():
             m[i - 1, j] = S * (U ** (j)) * (D ** ((i - 1) - (j)))
 
     df = pd.DataFrame(m)
-    print("\nBinomial Tree Stock Prices", df)
+    print("\nBinomial Tree Stock Prices\n", df)
 
     mm = np.zeros((steps + 1, steps + 1))
 
@@ -45,7 +45,7 @@ def binomial():
             mm[i, j] = ((((1 - p) * mm[i + 1, j]) + (p * mm[i + 1, j + 1])) / math.exp(r * delta_t))
 
     df = pd.DataFrame(mm)
-    print("\nOption Prices", df)
+    print("\nOption Prices\n", df)
 
 # Black Scholes Option Pricing
 def blackScholes():
