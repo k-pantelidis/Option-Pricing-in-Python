@@ -6,10 +6,10 @@ from scipy.stats import norm
 
 S = float(input("Insert Stock Spot Price(Default 155.87): ") or 155.87)
 X = float(input("Insert Option Strike Price(Default 155.87): ") or 155.87)
-sigma = float(input("Insert Stock Volatility Percentage(Default 17.55): ") or 17.55) / 100
+sigma = float(input("Insert Stock Volatility Percentage Rate(Default 17.55): ") or 17.55) / 100
 steps = int(input("Insert Number of Steps(Default 12): ") or 12)
 years = float(input("Insert Number of Years(Default 3): ") or 3)
-r = float(input("Insert Risk Free Rate Percentage(Default 0.86): ") or 0.86) / 100
+r = float(input("Insert Risk Free Percentage Rate(Default 0.86): ") or 0.86) / 100
 optionType = int(input("Insert 0 for Call Option or 1 for Put Option(Default 0)): ") or 0)
 optionModel = int(input("Insert 0 for Binomial Model or 1 for Black Scholes(Default 0)): ") or 0)
 
