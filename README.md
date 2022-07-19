@@ -4,6 +4,8 @@
 
 **Introduction**
 
+-----
+
 This program calculates Option values using the Binomial Tree and the Black-Scholes method.
 The arguments needed to make the calculations are:
 
