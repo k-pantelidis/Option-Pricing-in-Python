@@ -20,7 +20,7 @@ D = math.exp(-sigma * math.sqrt(delta_t))
 p = ( math.exp(r * delta_t) - D) / (U-D)
 
 
-
+# Binomial Tree Option Pricing
 def binomial():
     m = np.zeros((steps + 1, steps + 1))
 
@@ -29,7 +29,7 @@ def binomial():
             m[i - 1, j] = S * (U ** (j)) * (D ** ((i - 1) - (j)))
 
     df = pd.DataFrame(m)
-    print(df)
+    print("\nBinomial Tree Stock Prices", df)
 
     mm = np.zeros((steps + 1, steps + 1))
 
@@ -45,20 +45,20 @@ def binomial():
             mm[i, j] = ((((1 - p) * mm[i + 1, j]) + (p * mm[i + 1, j + 1])) / math.exp(r * delta_t))
 
     df = pd.DataFrame(mm)
-    print(df)
+    print("\nOption Prices", df)
 
 # Black Scholes Option Pricing
 def blackScholes():
     d1 = ( math.log(S/X) + (r+sigma**2/2) * years) / (sigma * math.sqrt(years))
     d2 = d1 - sigma * math.sqrt(years)
-    print(d1, d2)
+    print("\nD1: ", d1, "D2: ", d2)
 
     if (optionType == 0):
         callOption = (S * (norm.cdf(d1, 0, 1)) - (norm.cdf(d2, 0 , 1) * X * math.exp(-r * years)))
-        print(callOption)
+        print("The value of the Call option is:", callOption)
     else:
         putOption = (norm.cdf(-d2, 0 , 1) * X * math.exp(-r*years)) - S * (norm.cdf(-d1, 0, 1))
-        print(putOption)
+        print("The value of the Put option is:", putOption)
 
 if (optionModel == 0):
     binomial()
