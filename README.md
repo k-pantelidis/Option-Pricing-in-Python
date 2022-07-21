@@ -119,7 +119,7 @@ Option Prices
 Planned for the upcoming versions:
 
 - Trinomial Tree Option Pricing method
-- Graphic representation
+- Plots
 
 
 
